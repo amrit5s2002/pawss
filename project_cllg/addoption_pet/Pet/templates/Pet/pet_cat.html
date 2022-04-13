@@ -1,0 +1,15 @@
+{% extends "Pet/navbar.html" %}
+{% block content %}
+{% for pet in pets %}
+{% if pet.pet_status == "not_adopted" and pet.pet_category == "Cat"%}
+<h4>
+  <p>{{pet.pet_name}}  </p>
+  <p>{{pet.pet_category}}</p>  
+  <p>{{pet.pet_bread}}</p>  
+  <p>{{pet.pet_age}}</p>  
+  <p>{{pet.pet_vaccinated}}</p>
+  _______________________________________________________________________________________________________________________________________________________________
+</h4>    
+{% endif %}
+{% endfor %}
+{% endblock content %}

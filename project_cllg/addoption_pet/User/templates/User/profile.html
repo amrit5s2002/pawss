@@ -1,0 +1,18 @@
+{% extends "Pet/navbar.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="form-modal">
+<div id="signup-form">
+<div>
+    <form action = '' method="post">
+    {%csrf_token%}
+        {{u_form|crispy}}
+        <input type="submit">
+    </form>
+</div>
+</div>
+</div>
+</body>
+{% endblock content %}
+</html>
+
